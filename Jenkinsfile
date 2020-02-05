@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        gitRepository = 'ssh://git@stash.concentricsky.com/doc/bitbucket-builder.git'
+        gitRepository = 'ssh://git@stash.concentricsky.com/doc/bitbucket_builder.git'
         projectName = 'bitbucket'
         registryCredential = 'dockerhub'
     }
