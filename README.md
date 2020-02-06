@@ -10,7 +10,7 @@ Note that the Atlassian documentation is currently incorrect for the location to
 
 Their documentation indicates: /opt/atlassian/bitbucket/lib  
 
-The correct location is: /var/atlassian/application-data/bitbucket/lib   
+The correct location is: /opt/atlassian/bitbucket/app/WEB-INF/lib   
 
 ## Usage
 
