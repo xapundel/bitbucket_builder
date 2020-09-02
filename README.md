@@ -12,7 +12,9 @@ Their documentation indicates: /opt/atlassian/bitbucket/lib
 
 The correct location is: /opt/atlassian/bitbucket/app/WEB-INF/lib   
 
+Check the Dockerfile to make sure you are building the correct version
+
 ## Usage
 
-docker build -t concentricsky/bitbucket:6.10.0_ubuntu_jdk11 .
-
+docker build -t concentricsky/atlassian:bitbucket_6.10.1_ubuntu_jdk11 .
+docker push concentricsky/atlassian:bitbucket_6.10.1_ubuntu_jdk11
