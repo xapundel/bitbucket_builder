@@ -1,4 +1,4 @@
-FROM atlassian/bitbucket-server:6.10.0-ubuntu-jdk11
+FROM atlassian/bitbucket-server:6.9.1-ubuntu-jdk11
 
 ADD https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.48.tar.gz /root
 RUN /bin/tar zxf /root/mysql-connector-java-5.1.48.tar.gz --strip-components 1 -C /opt/atlassian/bitbucket/app/WEB-INF/lib mysql-connector-java-5.1.48/mysql-connector-java-5.1.48-bin.jar
@@ -6,7 +6,7 @@ RUN /bin/tar zxf /root/mysql-connector-java-5.1.48.tar.gz --strip-components 1 -
 ADD files/dc01-ca.crt /opt/
 RUN /opt/java/openjdk/bin/keytool -import \
   -alias dc01 \
-  -keystore /opt/java/openjdk/jre/lib/cacerts \
+  -keystore /opt/java/openjdk/jre/lib/security/cacerts \
   -storepass changeit \
   -noprompt \
   -file /opt/dc01-ca.crt
