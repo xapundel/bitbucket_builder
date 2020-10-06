@@ -6,7 +6,7 @@ RUN /bin/tar zxf /root/mysql-connector-java-5.1.48.tar.gz --strip-components 1 -
 ADD files/dc01-ca.crt /opt/
 RUN /opt/java/openjdk/bin/keytool -import \
   -alias dc01 \
-  -keystore /opt/java/openjdk/jre/lib/security/cacerts \
+  -keystore /opt/java/openjdk/lib/security/cacerts \
   -storepass changeit \
   -noprompt \
   -file /opt/dc01-ca.crt
